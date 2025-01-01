@@ -15,6 +15,7 @@ pipeline {
     stage ('Install') {
       steps {
         // install required bundles
+        sh 'bundle lock --add-platform java'
         sh 'bundle install'
       }
     }
